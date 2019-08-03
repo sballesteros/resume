@@ -57,6 +57,12 @@ header p {
   content: '';
 }
 
+
+.teaching ul {
+  margin: 0;
+  padding: 0;
+}
+
 .skills dl {
   columns: 2;
 }
@@ -97,9 +103,26 @@ h6 a {
 .dated-title {
   margin-bottom: 0;
   padding-bottom: 0;
+  margin-left: -15px;
+  padding-left: 10px;
+  border-left: 5px solid #42a5f5;
 }
 
 .dates {
+  color: #434343;
   padding: 0;
   margin: 0;
+}
+
+.divider-title {
+  position: relative;
+  margin-left: -75px;
+  padding-left: 10px;
+  border-left: 65px solid #42a5f5;
+}
+
+@media print {
+  a {
+    color: black;
+  }
 }
