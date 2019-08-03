@@ -1,8 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 body {
-  max-width: 940px;
+  max-width: 740px;
   margin: auto;
   padding: 20px;
-  font-family: serif;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #42a5f5;
+}
+
+abbr {
+  border-bottom: none !important;
+  cursor: inherit !important;
+  text-decoration: none !important;
+}
+
+header h1 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+header p {
+  font-style: italic;
+  color: #434343;
+  margin-top: 0.5em;
+  padding-top: 0;
+}
+
+.meta {
+  margin: 2em 0;
+}
+
+.tech-list {
+  color: #434343;
 }
 
 .tech-list > p {
@@ -29,6 +61,10 @@ body {
   columns: 2;
 }
 
+.skills dt {
+  font-weight: bold;
+}
+
 .skills dt:not(:first-of-type) {
   margin-top: 1em;
 }
@@ -48,13 +84,14 @@ body {
 }
 
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: sans-serif;
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: black;
 }
 
 .dated-title {
