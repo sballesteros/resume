@@ -1,3 +1,10 @@
+body {
+  max-width: 940px;
+  margin: auto;
+  padding: 20px;
+  font-family: serif;
+}
+
 .tech-list > p {
   display: inline;
 }
@@ -11,9 +18,51 @@
 .tech-list > ul  > li {
   display: inline;
 }
-.tech-list > ul > li:after {
+.tech-list > ul > li::after {
   content: ', ';
 }
-.tech-list > ul > li:last-of-type:after {
+.tech-list > ul > li:last-of-type::after {
   content: '';
+}
+
+.skills dl {
+  columns: 2;
+}
+
+.skills dt:not(:first-of-type) {
+  margin-top: 1em;
+}
+
+.skills dd {
+  break-before: avoid;
+}
+
+.languages dt {
+  float: left;
+  clear: left;
+}
+
+.languages dt::after {
+  white-space: pre;
+  content: ": ";
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: sans-serif;
+}
+
+.dated-title {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.dates {
+  padding: 0;
+  margin: 0;
 }

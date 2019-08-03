@@ -4,100 +4,114 @@
     <title>Sébastien Ballesteros</title>
     <link rel="stylesheet" href="index.css" />
   </head>
-  <body>
+  <body vocab="https://schema.org/" typeof="Person">
     <header>
-      <h1>Sébastien Ballesteros</h1>
+      <h1 property="name">
+        <span property="givenName">Sébastien</span> <span property="familyName">Ballesteros</span>
+      </h1>
       <p>Versatile Technologist</p>
     </header>
 
     <dl>
       <dt>email</dt>
-      <dd>sebastien.ballesteros@gmail.com</dd>
+      <dd><a property="email" href="mailto:sebastien.ballesteros@gmail.com">sebastien.ballesteros@gmail.com</a></dd>
 
       <dt>phone</dt>
-      <dd>+1 646 510 5676</dd>
+      <dd><a property="telephone" href="tel:+16465105676">+1 646 510 5676</a></dd>
 
       <dt>github</dt>
-      <dd>sballesteros</dd>
+      <dd><a property="sameAs" href="https://github.com/sballesteros">sballesteros</a></dd>
 
       <dt>location</dt>
-      <dd>Los Angeles, CA, USA</dd>
+      <dd property="address" typeof="PostalAddress">
+        <span property="addressLocality">Los Angeles</span>,  <span property="addressRegion">CA</span>, <span property="addressCountry">USA</span>
+      </dd>
     </dl>
 
     <section>
       <h2>About me</h2>
 
-      <p>
+      <p property="description">
         I was trained as an engineer and agronomist but faced the delusion of
-       so-called agricultural development. I escaped and sought refuge in an
-       ivory tower working in the theoretical world of statistics, mathematical
-       modeling, epidemiology and theoretical ecology & evolution. There, I saw
-       some infrastructural flaws and founded a company to change the way
-       science is being published and used. Along the way, I became a versatile
-       technologist with solid experience in web development and turning ideas
-       into products.
+        so-called agricultural development. I escaped and sought refuge in an
+        ivory tower working in the theoretical world of statistics, mathematical
+        modeling, epidemiology and theoretical ecology & evolution. There, I saw
+        some infrastructural flaws and founded a company to improve the way
+        science is being published and used. Along the way, I became a versatile
+        technologist with solid experience in web development and turning ideas
+        into products.
       </p>
     </section>
 
     <section>
       <h2>Experience</h2>
 
-      <section>
-        <h3>CTO / CEO sci.pe, New York City - Los Angeles</h3>
-        <p>since 2014</p>
-        <p>
-          Designed the vision, built the product and managed the team behind
-          <a href="https://sci.pe">sci.pe</a>. <a href="https://sci.pe">sci.pe</a>
-          re-invented the scholarly publishing platform and was the first
-          company to help publishers transition to web-first publishing.
-        </p>
+      <section property="worksFor" typeof="EmployeeRole">
+        <h3 class="dated-title">
+          <span property="roleName">CTO / CEO</span>
+          <span property="worksFor" typeof="Organization">
+            <a property="url" href="https://sci.pe"><abbr title="science periodicals" property="name">sci.pe</abbr></a>, <span property="location" typeof="Address"><span property="addressLocality">Los Angeles</span></span> - <span property="location" typeof="Address"><span property="addressLocality">New York City</span></span>
+          </span>
+        </h3>
 
-        <p>
-          The company was incubated by <a href="https://webfwd.org/">Mozilla
-          webFWD</a> and <a href="https://www.techstars.com">Techstars NYC</a>
-          and worked with major publishers as clients.
-        </p>
+        <p class="dates">since <span property="startDate">2014</span></p>
 
-        <div class='tech-list'>
-        <p>
-          Technologies:
-        </p>
-        <ul>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>Redux</li>
-          <li>D3.js</li>
-          <li>Node.js</li>
-          <li>zeromq</li>
-          <li>CouchDB</li>
-          <li>PouchDB</li>
-          <li>Redis</li>
-          <li>AWS</li>
-          <li>Docker</li>
-          <li>CircleCI</li>
-          <li>Stripe</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>RDFa</li>
-          <li>JSON-LD</li>
-          <li>Bash</li>
-          <li>OOXML</li>
-          <li>XML</li>
-          <li>Python</li>
-        </ul>
+        <div property="description">
+          <p>
+            Designed the vision; architected, built, and ran the product; and
+            managed the team behind
+            <a href="https://sci.pe">sci.pe</a>. <a href="https://sci.pe">sci.pe</a>
+            re-invented the scholarly publishing platform and was the first
+            company to help publishers transition to web-first publishing.
+          </p>
+
+          <p>
+            The company was incubated by <a href="https://webfwd.org/">Mozilla
+              webFWD</a> and <a href="https://www.techstars.com">Techstars NYC</a>
+            and worked with major publishers as clients.
+          </p>
+        </div>
+
+        <div class="tech-list">
+          <p>
+            Technologies:
+          </p>
+          <ul>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Redux</li>
+            <li>D3.js</li>
+            <li>Node.js</li>
+            <li>zeromq</li>
+            <li>CouchDB</li>
+            <li>PouchDB</li>
+            <li>Redis</li>
+            <li>AWS</li>
+            <li>Docker</li>
+            <li>CircleCI</li>
+            <li>Stripe</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>RDFa</li>
+            <li>JSON-LD</li>
+            <li>Bash</li>
+            <li>OOXML</li>
+            <li>XML</li>
+            <li>Python</li>
+          </ul>
         </div>
       </section>
 
       <section>
-        <h3>Postdoctoral fellow, Princeton University, Princeton, NJ</h3>
-        <p>2011 - 2014</p>
+        <h3 class="dated-title">Postdoctoral fellow, Princeton University, Princeton, NJ</h3>
+        <p class="dates">2011 - 2014</p>
         <p>
           I developed the infrastucture necessary to build a public library of
           models of the dynamic processes of infectious disease spread and
           control usable on demand from a web browser.
         </p>
 
-        <div class='tech-list'>
+        <div class="tech-list">
           <p>
             Technologies:
           </p>
@@ -117,43 +131,48 @@
       </section>
 
       <section>
-        <h3>Postdoctoral fellow for EPIWORK project, CMAF Centro de Matemática e Aplicações Fundamentais, Lisboa.</h3>
-        <p>2010 - 2011</p>
+        <h3 class="dated-title">Postdoctoral fellow for EPIWORK project, CMAF Centro de Matemática e Aplicações Fundamentais, Lisboa.</h3>
+        <p class="dates">2010 - 2011</p>
         <p>
           The EPIWORK project proposes a multidisciplinary research effort aimed
           at developing the appropriate framework of tools and knowledge needed
           for the design of epidemic forecast infrastructures to be used by
           epidemiologists and public health scientists. Within the project, I
-          participated in the foundation and development of web interfaces to
-          collect and access epidemiological data as well as in the development
-          of statistical and computational methods needed to achieve inference,
-          prediction, and predictability of disease spreading in complex
-          techno-social systems.
+          participated in the development of statistical and computational
+          methods needed to achieve inference, prediction, and predictability of
+          disease spreading in complex techno-social systems.
         </p>
 
-        <div class='tech-list'>
-        <p>
-          Technologies:
-        </p>
-        <ul>
-          <li>C</li>
-          <li>zeromq</li>
-          <li>Python</li>
-          <li>R</li>
-          <li>Django</li>
-          <li>MySQL</li>
-        </ul>
+        <div class="tech-list">
+          <p>
+            Technologies:
+          </p>
+          <ul>
+            <li>C</li>
+            <li>zeromq</li>
+            <li>Python</li>
+            <li>R</li>
+            <li>Django</li>
+            <li>MySQL</li>
+          </ul>
         </div>
       </section>
+    </section>
 
-      <section>
-        <h3>Ph.D. thesis in Ecology and Evolution, Laboratory Ecology and
-        Evolution (UMR 7625); Universite Pierre et Marie Curie, Ecole Normale
-        Supérieure, Paris, Awarded with distinction and special mention from the
-        examination board.</h3>
-        <p>2006 - 2009</p>
+    <section>
+      <h2>Education</h2>
+      <section property="alumniOf" typeof="OrganizationRole">
+        <h3 class="dated-title">
+          Ph.D. thesis in Ecology and Evolution,
+          <span property="alumniOf" typeof="Organization">
+            <span property="name">Laboratory Ecology and Evolution (UMR 7625)</span>;
+            <span property="parentOrganization" typeof="Organization"><span property="name">Universite Pierre et Marie Curie</span>, <span property="parentOrganization" typeof="Organization"><span property="name">Ecole Normale Supérieure</span>, <span property="location" typeof="Address"><span property="addressRegion">Paris</span></span></span></span></span>
+          - Awarded with distinction and special mention from the examination board.
+        </h3>
 
-        <p>
+        <p class="dates"><span property="startDate">2006</span> - <span property="endDate">2009</span></p>
+
+        <p property="description">
           My thesis focused on the melding of immunodynamics, epidemiology and
           evolutionary biology. I used a combination of mathematical and
           statistical approaches to understand the processes driving outbreak
@@ -162,7 +181,7 @@
           influenza, dengue, and HIV.
         </p>
 
-        <div class='tech-list'>
+        <div class="tech-list">
           <p>
             Technologies:
           </p>
@@ -176,15 +195,15 @@
       </section>
 
       <section>
-        <h3>Master’s Degree by research, Universities Paris 6 and Paris 11, AgroParisTech, Ecole Nor- male Supérieure, with honors (ranked first).</h3>
-        <p>2006–2005</p>
+        <h3 class="dated-title">Master’s Degree by research, Universities Paris 6 and Paris 11, AgroParisTech, Ecole Nor- male Supérieure, with honors (ranked first).</h3>
+        <p class="dates">2006–2005</p>
         <p>Ecology, Biodiversity and Evolution, speciality Theoretical Ecology and Modeling.</p>
       </section>
 
 
       <section>
-        <h3>Engineer, INA P-G (now AgroParisTech).</h3>
-        <p>2005–2003</p>
+        <h3 class="dated-title">Engineer, INA P-G (now AgroParisTech).</h3>
+        <p class="dates">2005–2003</p>
         <p>France’s top post graduate engineering school for agronomy and life sciences.</p>
       </section>
 
@@ -193,20 +212,20 @@
         <h3>Internships</h3>
 
         <section>
-          <h4>6 months Master’s internship, Chizé Centre for Biological Studies (CNRS), France.</h4>
-          <p>2006–2005</p>
+          <h4 class="dated-title">6 months Master’s internship, Chizé Centre for Biological Studies (CNRS), France.</h4>
+          <p class="dates">2006–2005</p>
           <p>I developed an analytical model focusing on spatial scale disparity in predator-prey interactions.</p>
         </section>
 
         <section>
-          <h4>5 months Engineer internship, IRD UR SOLUTIONS and International Water Management Institute, Vietnam.</h4>
-          <p>2005–2004</p>
+          <h4 class="dated-title">5 months Engineer internship, IRD UR SOLUTIONS and International Water Management Institute, Vietnam.</h4>
+          <p class="dates">2005–2004</p>
           <p>I developed a statistical model to study the impact of land use changes on suspended matter flow in a small agricultural watershed of North Vietnam.</p>
         </section>
 
         <section>
-          <h4>6 weeks internship, Laboratory Ecology and Evolution (UMR 7625), Paris.</h4>
-          <p>2005–2004</p>
+          <h4 class="dated-title">6 weeks internship, Laboratory Ecology and Evolution (UMR 7625), Paris.</h4>
+          <p class="dates">2005–2004</p>
           <p>Modeling functional response in consumer resources dynamics.</p>
         </section>
       </section>
@@ -231,106 +250,107 @@
       </section>
     </section>
 
-    <section>
+
+    <section class='skills'>
       <h2>Technological skills</h2>
 
       <dl>
         <dt>Programming</dt>
-        <dd>JavaScript</dd>
-        <dd>C</dd>
-        <dd>Python</dd>
-        <dd>R</dd>
-        <dd>Bash</dd>
+        <dd property="knowsAbout">JavaScript</dd>
+        <dd property="knowsAbout">C</dd>
+        <dd property="knowsAbout">Python</dd>
+        <dd property="knowsAbout">R</dd>
+        <dd property="knowsAbout">Bash</dd>
 
         <dt>Web development</dt>
-        <dd>
+        <dd property="knowsAbout">
           React
         </dd>
-        <dd>
+        <dd property="knowsAbout">
           Redux
         </dd>
-        <dd>
+        <dd property="knowsAbout">
           Node.js
         </dd>
-        <dd>D3.js</dd>
-        <dd>
+        <dd property="knowsAbout">D3.js</dd>
+        <dd property="knowsAbout">
           webpack
         </dd>
-        <dd>
+        <dd property="knowsAbout">
           browserify
         </dd>
-        <dd>
+        <dd property="knowsAbout">
           HTML
         </dd>
-        <dd>
+        <dd property="knowsAbout">
           CSS
         </dd>
-        <dd>
+        <dd property="knowsAbout">
           RDFa
         </dd>
-        <dd>
+        <dd property="knowsAbout">
           JSON-LD
         </dd>
-        <dd>
+        <dd property="knowsAbout">
           RDF
         </dd>
-        <dd>
+        <dd property="knowsAbout">
           RDF Schema
         </dd>
-        <dd>
+        <dd property="knowsAbout">
           XML
         </dd>
-        <dd>
+        <dd property="knowsAbout">
           SPARQL
         </dd>
-        <dd>
+        <dd property="knowsAbout">
           OWL
         </dd>
-        <dd>
+        <dd property="knowsAbout">
           schema.org
         </dd>
 
-        <dt>Database</dt>
-        <dd>CouchDB</dd>
-        <dd>PouchDB</dd>
-        <dd>MongoDB (certificate from 10gen)</dd>
-        <dd>Redis (certificate from redislab)</dd>
-        <dd>LevelDB</dd>
-        <dd>MySQL</dd>
+        <dt>Databases</dt>
+        <dd property="knowsAbout">CouchDB</dd>
+        <dd property="knowsAbout">PouchDB</dd>
+        <dd property="knowsAbout">MongoDB (certificate from 10gen)</dd>
+        <dd property="knowsAbout">Redis (certificate from redislab)</dd>
+        <dd property="knowsAbout">LevelDB</dd>
+        <dd property="knowsAbout">MySQL</dd>
 
         <dt>Cloud services</dt>
-        <dd>AWS</dd>
+        <dd property="knowsAbout">AWS</dd>
 
         <dt>Continuous integration</dt>
-        <dd>CircleCI</dd>
+        <dd property="knowsAbout">CircleCI</dd>
 
         <dt>e-commerce</dt>
-        <dd>stripe</dd>
+        <dd property="knowsAbout">stripe</dd>
 
         <dt>Operating systems</dt>
-        <dd>GNU/Linux</dd>
-        <dd>OSX</dd>
-        <dd>Docker</dd>
+        <dd property="knowsAbout">GNU/Linux</dd>
+        <dd property="knowsAbout">OSX</dd>
+        <dd property="knowsAbout">Docker</dd>
 
         <dt>Statistics</dt>
-        <dd>R</dd>
-        <dd>SAS</dd>
-        <dd>WinBugs</dd>
+        <dd property="knowsAbout">R</dd>
+        <dd property="knowsAbout">SAS</dd>
+        <dd property="knowsAbout">WinBugs</dd>
       </dl>
     </section>
 
 
-    <section>
-      <h2>Language</h2>
+    <section class="languages">
+      <h2>Languages</h2>
 
       <dl>
-        <dt>French</dt>
+        <dt property="knowsLanguage">French</dt>
         <dd>Mother tongue</dd>
 
-        <dt>English</dt>
+        <dt property="knowsLanguage">English</dt>
         <dd>Fluent</dd>
 
-        <dt>Spanish</dt>
+        <dt property="knowsLanguage">Spanish</dt>
         <dd>Basic - Extensive travel in hispanic countries</dd>
       </dl>
     </section>
@@ -338,18 +358,22 @@
     <section>
       <h2>Extracurricular</h2>
 
-      <section>
-        <h3>Founder Journal for the Planet</h3>
-        <p>
-          <a href="https://journalfortheplanet.org">Journal for the Planet</a>
-          aims to provide a medium that policy makers and global citizens can
-          leverage to better understand and solve the environmental issues of
-          our time.
+      <section property="memberOf" typeof="OrganizationRole">
+        <h3>
+          <span property="roleName">Founder</span> <span property="memberOf" typeof="Organization"><span property="name"><a property="url" href="https://journalfortheplanet.org">Journal for the Planet</a></span></span>
+        </h3>
+
+        <p property="description">
+          I founded <a href="https://journalfortheplanet.org">Journal for the
+          Planet</a> to provide a medium that policy makers and global citizens
+          can leverage to better understand and solve the environmental issues
+          of our time.
         </p>
       </section>
 
       <section>
-        <h3>Perpetual board pumping techniques & land paddling</h3>
+        <h3><span property="knowsAbout">Perpetual board pumping techniques</span> & <span property="knowsAbout">land paddling</span></h3>
+
         <p>
           Perpetual board pumping techniques were invented centuries ago by
           Polynesian and Hawaiian surfers, and when I am not working, you can
@@ -360,7 +384,10 @@
       </section>
 
       <section>
-        <h3>Surfing & kitesurfing</h3>
+        <h3>
+          <span property="knowsAbout">Surfing</span> & <span>kitesurfing</span>
+        </h3>
+
         <p>
           When time is a bit more available, you can also find me in the water
           enjoying the wind and the ocean with surfing or kitesurfing.
