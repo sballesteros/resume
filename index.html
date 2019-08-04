@@ -5,7 +5,7 @@
 
     <link rel="stylesheet" href="index.css" />
   </head>
-  <body vocab="https://schema.org/" typeof="Person">
+  <body vocab="https://schema.org/" resource="#" typeof="Person">
     <header>
       <h1 property="name">
         <span property="givenName">Sébastien</span> <span property="familyName">Ballesteros</span>
@@ -25,7 +25,7 @@
 
       <dt>location</dt>
       <dd property="address" typeof="PostalAddress">
-        <span property="addressLocality">Los Angeles</span>,  <span property="addressRegion">CA</span>, <span property="addressCountry">USA</span>
+        <span property="addressLocality">Los Angeles</span>, <span property="addressRegion">CA</span>, <span property="addressCountry">USA</span>
       </dd>
     </dl>
 
@@ -67,9 +67,7 @@
           </p>
 
           <p>
-            The company was incubated by <a href="https://webfwd.org/">Mozilla
-              webFWD</a> and <a href="https://www.techstars.com">Techstars NYC</a>
-            and worked with major publishers as clients.
+            The company was incubated by <span resource="#"><span property="alumniOf" typeof="Organization"><a property="url" href="https://webfwd.org/"><span property="name">Mozilla webFWD</span></a></span></span> and  <span resource="#"><span property="alumniOf" typeof="Organization"><a property="url" href="https://www.techstars.com"><span property="name">Techstars NYC</span></a></span></span> and worked with major publishers as clients.
           </p>
         </div>
 
@@ -87,6 +85,7 @@
             <li>CouchDB</li>
             <li>PouchDB</li>
             <li>Redis</li>
+            <li>Lucene / ElasticSearch</li>
             <li>AWS</li>
             <li>Docker</li>
             <li>CircleCI</li>
@@ -103,13 +102,17 @@
         </div>
       </section>
 
-      <section>
-        <h3 class="dated-title">Postdoctoral fellow, Princeton University, Princeton, NJ</h3>
-        <p class="dates">2011 - 2014</p>
-        <p>
-          I developed the infrastucture necessary to build a public library of
+      <section property="worksFor" typeof="EmployeeRole">
+        <h3 class="dated-title">
+          <span property="roleName">Postdoctoral fellow</span>, <span property="worksFor" typeof="CollegeOrUniversity"><span property="name">Princeton University</span>, <span property="location" typeof="PostalAddress"><span property="addressLocality">Princeton</span>, <span property="addressRegion">NJ</span></span></span>
+        </h3>
+
+        <p class="dates"><span property="startDate">2011</span>–<span property="endDate">2014</span></p>
+
+        <p property="description">
+          Developed the infrastucture necessary to build a public library of
           models of the dynamic processes of infectious disease spread and
-          control usable on demand from a web browser.
+          control, usable on demand from a web browser.
         </p>
 
         <div class="tech-list">
@@ -131,17 +134,17 @@
         </div>
       </section>
 
-      <section>
-        <h3 class="dated-title">Postdoctoral fellow for EPIWORK project, CMAF Centro de Matemática e Aplicações Fundamentais, Lisboa.</h3>
-        <p class="dates">2010 - 2011</p>
-        <p>
-          The EPIWORK project proposes a multidisciplinary research effort aimed
-          at developing the appropriate framework of tools and knowledge needed
-          for the design of epidemic forecast infrastructures to be used by
-          epidemiologists and public health scientists. Within the project, I
-          participated in the development of statistical and computational
-          methods needed to achieve inference, prediction, and predictability of
-          disease spreading in complex techno-social systems.
+      <section property="worksFor" typeof="EmployeeRole">
+        <h3 class="dated-title">
+          <span property="roleName">Postdoctoral fellow</span>, <span property="worksFor" typeof="CollegeOrUniversity">EPIWORK project, <span property="alternateName">CMAF</span> <span property="name">Centro de Matemática e Aplicações Fundamentais</span>, <span property="location" typeof="PostalAddress"><span property="addressLocality">Lisbon</span>, <span property="addressCountry">Portugal</span></span><span>
+        </h3>
+
+        <p class="dates"><span property="startDate">2010</span>–<span property="endDate">2011</span></p>
+
+        <p property="description">
+          Developed statistical and computational methods needed to achieve
+          inference, prediction, and predictability of disease spreading in
+          complex techno-social systems.
         </p>
 
         <div class="tech-list">
@@ -162,16 +165,17 @@
 
     <section>
       <h2 class="divider-title">Education</h2>
+
       <section property="alumniOf" typeof="OrganizationRole">
         <h3 class="dated-title">
-          Ph.D. thesis in Ecology and Evolution,
+          <span property="roleName">Ph.D.</span> thesis in Ecology and Evolution,
           <span property="alumniOf" typeof="Organization">
             <span property="name">Laboratory Ecology and Evolution (UMR 7625)</span>;
-            <span property="parentOrganization" typeof="Organization"><span property="name">Universite Pierre et Marie Curie</span>, <span property="parentOrganization" typeof="Organization"><span property="name">Ecole Normale Supérieure</span>, <span property="location" typeof="PostalAddress"><span property="addressRegion">Paris</span></span></span></span></span>
-          - Awarded with distinction and special mention from the examination board.
+            <span property="parentOrganization" typeof="Organization"><span property="name">Universite Pierre et Marie Curie</span>, <span property="parentOrganization" typeof="Organization"><span property="name">Ecole Normale Supérieure</span>, <span property="location" typeof="PostalAddress"><span property="addressRegion">Paris</span>, <span property="addressCountry">France<span></span></span></span></span>
+          - Awarded with distinction and special mention from the examination board
         </h3>
 
-        <p class="dates"><span property="startDate">2006</span> - <span property="endDate">2009</span></p>
+        <p class="dates"><span property="startDate">2006</span>–<span property="endDate">2009</span></p>
 
         <p property="description">
           My thesis focused on the melding of immunodynamics, epidemiology and
@@ -179,7 +183,7 @@
           statistical approaches to understand the processes driving outbreak
           dynamics and the wide range of pathogen phylogenies observed at scales
           from individual host to populations. Developements focused on
-          influenza, dengue, and HIV.
+          influenza, dengue and HIV.
         </p>
 
         <div class="tech-list">
@@ -196,36 +200,42 @@
       </section>
 
       <section>
-        <h3 class="dated-title">Master’s Degree by research, Universities Paris 6 and Paris 11, AgroParisTech, Ecole Normale Supérieure, with honors (ranked first).</h3>
-        <p class="dates">2006–2005</p>
+        <h3 class="dated-title">Master’s Degree by research, Universities Paris 6 and Paris 11, AgroParisTech, Ecole Normale Supérieure, with honors (ranked first)</h3>
+        <p class="dates">2005–2006</p>
         <p>Ecology, Biodiversity and Evolution, speciality Theoretical Ecology and Modeling.</p>
       </section>
 
       <section>
-        <h3 class="dated-title">Engineer, INA P-G (now AgroParisTech).</h3>
-        <p class="dates">2005–2003</p>
-        <p>France’s top post graduate engineering school for agronomy and life sciences.</p>
+        <div property="alumniOf" typeof="OrganizationRole">
+          <h3 class="dated-title">Engineer, <span property="alumniOf" typeof="EducationalOrganization"resource="https://www.agroparistech.fr"><span property="alternateName">INA P-G</span> (now <span property="name"><a property="url" href="https://www.agroparistech.fr">AgroParisTech</a></span>), <span property="location" typeof="PostalAddress"><span property="addressLocality">Paris</span>, <span property="addressCountry">France</span></span></span></h3>
+
+          <p class="dates"><span property="startDate">2003</span>–<span property="endDate">2005</span></p>
+        </div>
+
+        <div resource="https://www.agroparistech.fr">
+          <p property="description">France’s top post graduate engineering school for agronomy and life sciences.</p>
+        </div>
       </section>
 
       <section>
         <h3 class="divider-title">Internships</h3>
 
         <section>
-          <h4 class="dated-title">6 months Master’s internship, Chizé Centre for Biological Studies (CNRS), France.</h4>
-          <p class="dates">2006–2005</p>
-          <p>I developed an analytical model focusing on spatial scale disparity in predator-prey interactions.</p>
+          <h4 class="dated-title">6 months Master’s internship, Chizé Centre for Biological Studies (CNRS), France</h4>
+          <p class="dates">2005–2006</p>
+          <p>Developed an analytical model focusing on spatial scale disparity in predator-prey interactions.</p>
         </section>
 
         <section>
-          <h4 class="dated-title">5 months Engineer internship, IRD UR SOLUTIONS and International Water Management Institute, Vietnam.</h4>
-          <p class="dates">2005–2004</p>
-          <p>I developed a statistical model to study the impact of land use changes on suspended matter flow in a small agricultural watershed of North Vietnam.</p>
+          <h4 class="dated-title">5 months Engineer internship, IRD UR SOLUTIONS and International Water Management Institute, Vietnam</h4>
+          <p class="dates">2004–2005</p>
+          <p>Developed a statistical model to study the impact of land use changes on suspended matter flow in a small agricultural watershed of North Vietnam.</p>
         </section>
 
         <section>
-          <h4 class="dated-title">6 weeks internship, Laboratory Ecology and Evolution (UMR 7625), Paris.</h4>
-          <p class="dates">2005–2004</p>
-          <p>Modeling functional response in consumer resources dynamics.</p>
+          <h4 class="dated-title">6 weeks internship, Laboratory Ecology and Evolution (UMR 7625), Paris, France</h4>
+          <p class="dates">2004–2005</p>
+          <p>Modeled functional response in consumer resources dynamics.</p>
         </section>
       </section>
 
@@ -237,13 +247,13 @@
             Statistics (undergraduate students) the Muséum National d’Histoire Naturelle, Princeton University).
           </li>
           <li>
-            Scientific animation (popularisation works) in the Muséum National d’Histoire Naturelle. HIV epidemiology and evolution; Virulence evolution of infectious diseases. Those activities were based on interactive computer simulations (C and GTK+) that I developed for the Muséum.
+            Scientific animation (popularisation works) in the Muséum National d’Histoire Naturelle. HIV epidemiology and evolution; virulence evolution of infectious diseases. Those activities were based on interactive computer simulations (C and GTK+) that I developed for the Muséum.
           </li>
           <li>
             Supervised a 6-month Masters intern working on the phylodynamics of HIV.
           </li>
           <li>
-            Supervision of 2 internship students from the Ecole Normale Supérieure.
+            Supervised 2 internship students from the Ecole Normale Supérieure.
           </li>
         </ul>
       </section>
@@ -316,6 +326,7 @@
         <dd property="knowsAbout">Redis (certificate from redislab)</dd>
         <dd property="knowsAbout">LevelDB</dd>
         <dd property="knowsAbout">MySQL</dd>
+        <dd property="knowsAbout">Lucene / ElasticSearch</dd>
 
         <dt>Cloud services</dt>
         <dd property="knowsAbout">AWS</dd>
@@ -323,7 +334,7 @@
         <dt>Continuous integration</dt>
         <dd property="knowsAbout">CircleCI</dd>
 
-        <dt>e-commerce</dt>
+        <dt>E-commerce</dt>
         <dd property="knowsAbout">stripe</dd>
 
         <dt>Operating systems</dt>
@@ -363,7 +374,7 @@
         </h3>
 
         <p property="description">
-          I founded <a href="https://journalfortheplanet.org">Journal for the
+          Founded <a href="https://journalfortheplanet.org">Journal for the
           Planet</a> to provide a medium that policy makers and global citizens
           can leverage to better understand and solve the environmental issues
           of our time.
