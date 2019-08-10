@@ -124,7 +124,12 @@ h6 a {
 }
 
 @media print {
+  body {
+    font-size: 10pt;
+  }
+
+  /*
   a {
     color: black;
-  }
+  }*/
 }
