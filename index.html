@@ -25,7 +25,7 @@
 
       <dt>Location</dt>
       <dd property="address" typeof="PostalAddress">
-        <span property="addressLocality">Los Angeles</span>, <span property="addressRegion">CA</span>, <span property="addressCountry">USA</span>
+        <span property="addressLocality">Menlo Park</span>, <span property="addressRegion">CA</span>, <span property="addressCountry">USA</span>
       </dd>
     </dl>
 
@@ -42,6 +42,16 @@
     <section>
       <h2 class="divider-title">Experience</h2>
 
+      <section property="worksFor" typeof="EmployeeRole">
+        <h3 class="dated-title">
+          <span property="roleName">Senior Frontend Engineer</span>,
+          <span property="worksFor" typeof="Organization">
+            <a property="url" href="https://duckduckgo.com/">DuckDuckGo</a>, <span property="location" typeof="PostalAddress"><span property="addressLocality">Menlo Park</span></span>
+          </span>
+        </h3>
+
+        <p class="dates">since <span property="startDate">2020</span></p>
+      </section>
 
       <section property="worksFor" typeof="EmployeeRole">
         <h3 class="dated-title">
@@ -96,8 +106,6 @@
           </ul>
         </div>
       </section>
-
-
 
       <section property="worksFor" typeof="EmployeeRole">
         <h3 class="dated-title">
